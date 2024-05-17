@@ -1,0 +1,2 @@
+install library 
+1. unit test : npm i --save-dev jest @types/jest
