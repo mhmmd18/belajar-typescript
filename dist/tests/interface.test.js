@@ -58,5 +58,26 @@ describe('interface', function () {
         };
         console.info(person.sayHello("Budi"));
     });
+    // intersection interface
+    // menggabungkan 2 interface dengan menggunakan type,
+    it('should intersection interface', function () {
+        const person = {
+            id: 1,
+            name: "Mamad"
+        };
+        console.info(person);
+    });
+    // type assertions
+    // mengubah type data, jika terdapat perbedaan di 2 variabel, maka akan error
+    // person2.age
+    // person2.sayHello("Budi")
+    it('should type assertions', function () {
+        const person = {
+            name: "Mamad",
+            age: 23
+        };
+        const person2 = person;
+        console.info(person2);
+    });
 });
 export {};

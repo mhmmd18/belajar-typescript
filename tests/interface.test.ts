@@ -1,4 +1,5 @@
 import { Employee, Manager } from "../src/employee";
+import { Person } from "../src/person";
 import { Seller } from "../src/seller"
 
 describe('interface', function () {
@@ -66,11 +67,6 @@ describe('interface', function () {
     })
     // function in interface
     it('should function in interface', function () {
-        interface Person {
-            name: string
-            sayHello(name: string): string
-        }
-
         const person: Person = {
             name: "Mamad",
             sayHello: (name) => {
@@ -79,5 +75,34 @@ describe('interface', function () {
         }
 
         console.info(person.sayHello("Budi"));
+    })
+    // intersection interface
+    // menggabungkan 2 interface dengan menggunakan type,
+    it('should intersection interface', function () {
+        interface hasId {
+            id: number
+        }
+        interface hasName {
+            name: string
+        }
+        type Person = hasId & hasName
+        const person: Person = {
+            id: 1,
+            name: "Mamad"
+        }
+        console.info(person);
+    })
+    // type assertions
+    // mengubah type data, jika terdapat perbedaan di 2 variabel, maka akan error
+    // person2.age
+    // person2.sayHello("Budi")
+    it('should type assertions', function () {
+        const person : any = {
+            name: "Mamad",
+            age: 23
+        }
+        const person2:Person = person as Person
+        console.info(person2)
+        
     })
 })
