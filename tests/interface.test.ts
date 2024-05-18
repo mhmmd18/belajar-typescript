@@ -5,8 +5,11 @@ describe('interface', function () {
         const seller: Seller = {
             id: 1,
             name: "Mamad",
-            address: "Jl. Pangeran Antasari"
+            address: "Jl. Pangeran Antasari",
+            phone: "081234567890"
         }
+        // phone tidak bisa diubah isi nya, karena readonly properties
+        // seller.phone = "081234567891"
         console.info(seller);
     })
 })
