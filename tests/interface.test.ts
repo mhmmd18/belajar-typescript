@@ -64,4 +64,20 @@ describe('interface', function () {
 
         console.info(manager);
     })
+    // function in interface
+    it('should function in interface', function () {
+        interface Person {
+            name: string
+            sayHello(name: string): string
+        }
+
+        const person: Person = {
+            name: "Mamad",
+            sayHello: (name) => {
+                return `Hello ${name}, my name is ${person.name}`
+            }
+        }
+
+        console.info(person.sayHello("Budi"));
+    })
 })

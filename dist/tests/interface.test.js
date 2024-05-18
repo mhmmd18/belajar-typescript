@@ -48,5 +48,15 @@ describe('interface', function () {
         };
         console.info(manager);
     });
+    // function in interface
+    it('should function in interface', function () {
+        const person = {
+            name: "Mamad",
+            sayHello: (name) => {
+                return `Hello ${name}, my name is ${person.name}`;
+            }
+        };
+        console.info(person.sayHello("Budi"));
+    });
 });
 export {};
