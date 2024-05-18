@@ -32,5 +32,21 @@ describe('interface', function () {
         console.info(book.name);
         console.info(book.author);
     });
+    // extends interface
+    it('should extends interface', function () {
+        const employee = {
+            id: 1,
+            name: "Mamad",
+            address: "Jl. Pangeran Antasari"
+        };
+        console.info(employee);
+        const manager = {
+            id: 2,
+            name: "Yunus",
+            address: "Jl. Pangeran Diponegoro",
+            department: "IT"
+        };
+        console.info(manager);
+    });
 });
 export {};
