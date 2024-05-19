@@ -57,4 +57,14 @@ describe('function', function () {
         expect(callMe("mamad")).toBe("MAMAD");
         expect(callMe(50)).toBe(500);
     });
+    // function as parameter
+    it('should function as parameter', function () {
+        function sayHello(name, filter) {
+            return `Hello ${filter(name)}`;
+        }
+        function toUpperCase(name) {
+            return name.toUpperCase();
+        }
+        expect(sayHello("Mamad", toUpperCase)).toBe("Hello MAMAD");
+    });
 });
