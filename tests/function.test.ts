@@ -18,4 +18,17 @@ describe('function', function () {
         expect(sayHello()).toBe("Hello Mamad");
         expect(sayHello("Joko")).toBe("Hello Joko");
     })
+    // rest parameter
+    // rest parameter ini pasti type datanya array
+    it('should rest parameter', function () {
+        function sum(...numbers: number[]): number {
+            let total = 0
+            for (const number of numbers) {
+                total += number
+            }
+            return total
+        }
+
+        expect(sum(1, 2, 3, 4, 5)).toBe(15)
+    })
 })
