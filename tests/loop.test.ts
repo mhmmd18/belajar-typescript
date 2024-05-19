@@ -11,4 +11,20 @@ describe('loop', function () {
             console.info(names[index]);
         }
     })
+    // while loop
+    it('should while loop', function () {
+        let counter: number = 0;
+        while (counter < 10) {
+            console.info(counter);
+            counter++;
+        }
+    })
+    // do while
+    it('should do while', function () {
+        let counter: number = 0;
+        do {
+            console.info(counter);
+            counter++;
+        } while (counter < 10);
+    })
 })
