@@ -68,6 +68,13 @@ describe('function', function () {
             return name.toUpperCase()
         }
         expect(sayHello("Mamad", toUpperCase)).toBe("Hello MAMAD")
+        // anonymouse function
+        // nama function tidak di definisikan
+        expect(sayHello("Dewi", function (name: string): string {
+            return name.toUpperCase()
+        })).toBe("Hello DEWI")
+        // arrow function =>
+        expect(sayHello("Agus", (name: string) => name.toUpperCase())).toBe("Hello AGUS")
     })
 
 })
