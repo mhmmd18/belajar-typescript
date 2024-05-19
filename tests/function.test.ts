@@ -10,4 +10,12 @@ describe('function', function () {
         }
         printHello("Mamad");
     });
+    // default value function
+    it('should default value function', function () {
+        function sayHello(name: string = "Mamad"): string {
+            return `Hello ${name}`;
+        }
+        expect(sayHello()).toBe("Hello Mamad");
+        expect(sayHello("Joko")).toBe("Hello Joko");
+    })
 })
