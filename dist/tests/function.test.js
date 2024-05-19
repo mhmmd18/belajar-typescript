@@ -43,4 +43,18 @@ describe('function', function () {
         expect(sayHello("Mamad")).toBe("Hello Mamad");
         expect(sayHello("Muhammad", "Joko")).toBe("Hello Muhammad Joko");
     });
+    // function overloading
+    // membuat function yang sama namanya tapi parameter berbeda
+    it('should function overloading', function () {
+        function callMe(value) {
+            if (typeof value === "string") {
+                return value.toUpperCase();
+            }
+            else {
+                return value * 10;
+            }
+        }
+        expect(callMe("mamad")).toBe("MAMAD");
+        expect(callMe(50)).toBe(500);
+    });
 });
