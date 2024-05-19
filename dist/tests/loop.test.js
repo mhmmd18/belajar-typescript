@@ -28,4 +28,18 @@ describe('loop', function () {
             counter++;
         } while (counter < 10);
     });
+    // break, continue
+    it('should break continue', function () {
+        let counter = 0;
+        do {
+            counter++;
+            if (counter == 10) {
+                break;
+            }
+            else if (counter % 2 == 0) {
+                continue;
+            }
+            console.info(counter);
+        } while (true);
+    });
 });
